@@ -27,8 +27,11 @@ std::ostream& operator<<(std::ostream& out, const Vector3& point)
 
 std::istream& operator>>(std::istream& in, Vector3& point)
 {
+    std::cout << "x: ";
     in >> point._x;
+    std::cout << "y: ";
     in >> point._y;
+    std::cout << "z: ";
     in >> point._z;
     return in;
 }
@@ -47,9 +50,12 @@ int main()
 {
     Vector3 vector;
     std::cin >> vector;
-    std::cout << vector;
 
-    std::cout << vector * 3.0;
+    std::cout << "vector = " << vector << std::endl;
 
-    std::cout << vector - vector;
+    std::cout << "vector * 3.0 = " << vector * 3.0 << std::endl;
+
+    std::cout << "vector - vector = " << vector - vector << std::endl;
+
+    return 0;
 }
